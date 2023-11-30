@@ -1,0 +1,43 @@
+#navItem{
+  color:goldenrod;
+
+  background-color: black;
+} 
+
+
+Nav.Link{
+    text-decoration: none;
+}
+
+#brandName{
+    padding-left: 85px;
+    color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#myLink{
+    color: goldenrod;
+}
+
+.brandCart{
+    display: flex;
+    
+}
+
+#brandCart2{
+    color: goldenrod;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    align-items: center;
+    font-size: 35px;
+}
+
+  /* #navItem{
+    position: fixed;
+    width: 100%;
+ }  */
+
+/* #navitem{
+position: fixed;
+width: 100px;
+} */

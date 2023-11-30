@@ -1,0 +1,19 @@
+img{
+    width: 65px;
+    height: 540px;
+}
+
+p{
+    color: goldenrod;
+}
+h5{
+    color: goldenrod;
+}
+
+#Btn{
+    background-color: goldenrod;
+    border: none;
+    position: relative;
+    bottom: 95px;
+    right:255px;
+}
