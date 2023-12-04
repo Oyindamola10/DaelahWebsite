@@ -12,30 +12,30 @@ const CarouselCom = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.gq.com/photos/5d93b28c3304070008faa5a0/master/pass/watches.jpg"
+          src="https://i.imgur.com/MlO6TcB.jpg"
           alt="First slide"  />
         <Carousel.Caption>
-        <Button size='lg' active id='Btn'> <a href="/collection">Shop Now</a></Button>
+        <Button size='lg' active id='Btn'> <a href="/collections">Shop Now</a></Button>
          
         </Carousel.Caption> 
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.gq.com/photos/5d93b28c3304070008faa5a0/master/pass/watches.jpg"
+          src="https://i.imgur.com/MlO6TcB.jpg"
           alt="First slide"  />
         <Carousel.Caption>
-        <Button size='lg' active id='Btn'><a href="/collection">Shop Now</a></Button>
+        <Button size='lg' active id='Btn'><a href="/collections">Shop Now</a></Button>
          
         </Carousel.Caption> 
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.gq.com/photos/5d93b28c3304070008faa5a0/master/pass/watches.jpg"
+          src="https://i.imgur.com/MlO6TcB.jpg"
           alt="First slide"  />
         <Carousel.Caption>
-        <Button size='lg' active id='Btn'><a href="/collection">Shop Now</a></Button>
+        <Button size='lg' active id='Btn'><a href="/collections">Shop Now</a></Button>
          
         </Carousel.Caption> 
       </Carousel.Item>

@@ -1,24 +1,28 @@
 import React from 'react'
+import Accessories from '../accessories/Accessories'
 import './ProductCard.css'
-const ProductCard = () => {
+const ProductCard = ({name, price, image, id}) => {
   return (
     <>
-    <div id='cardCase'>
-    <div className='card-img2'>
-        <img src="https://i.imgur.com/Xy5tToa.png" alt="Vc silver" id='img2'/>
-        <h4>VC Silver </h4>
-        <h4>N25,000</h4>
-        <p>Ships in 24hrs</p>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span> 
-        <div> 
-        <button>Add To Cart</button>
+      <div>
+      <div className="productCard">
+        <div>
+          <img src={image} alt="products" id="productsId" />
+          <h6>{name}</h6>
+          <h6>{price}</h6>
+          <p>Ships in 24hrs</p>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
         </div>
-    </div>
-    </div>
+        <div>
+          <button className="womenBtn">Add to cart</button>
+         
+        </div>
+      </div>
+      </div>
     </>
   )
 }

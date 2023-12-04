@@ -1,12 +1,12 @@
-import React from "react";
-import "./Men.css";
+import React from 'react'
+import './Accessories.css'
 
-const Men = ({ image, name, price }) => {
+const Accessories = ({image, name, price, id}) => {
   return (
-    <div>
-      <div className="cardMen">
+    <>
+        <div className="accessoriesCard">
         <div>
-          <img src={image} alt="Vc silver" id="img2" />
+          <img src={image} alt="accessories" id="accessoriesCard2" />
           <h6>{name}</h6>
           <h6>{price}</h6>
           <p>Ships in 24hrs</p>
@@ -15,14 +15,17 @@ const Men = ({ image, name, price }) => {
           <span className="fa fa-star checked"></span>
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
-          <div>
-            <button>Add To Cart</button>
-            
-          </div>
         </div>
+        <div>
+          <button className="accessoriesBtn">Add to cart</button>
+         
+        </div>
+        
       </div>
-    </div>
-  );
-};
+  
+    
+    </>
+  )
+}
 
-export default Men;
+export default Accessories

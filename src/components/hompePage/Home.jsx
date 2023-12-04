@@ -1,4 +1,5 @@
-import ProductCard from '../productCard/ProductCard';
+
+import ProductList from '../productCard/ProductList';
 import CarouselCom from './Carousel'
 // import Button from 'react-bootstrap/Button';
 import './Home.css'
@@ -24,7 +25,7 @@ const Home = () => {
             </div>
             <h1 id='heading1'>A Timepiece For All Occassions</h1>
           
-           <ProductCard/>
+           <ProductList/>
         </div>
     </>
   )

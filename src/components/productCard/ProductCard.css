@@ -1,23 +1,26 @@
 
 
-#img2{
-    width: 243px;
-    height: 256px;
+#productsId{
+    width: 267px;
+    height: 347px;
     /* padding-left: 10px; */
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
-.card-img2{
-    width: 261px;
-    height: 288px;
-    padding-left: 20px;
-    padding-top: 17px;
+.productlistCard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     text-align: center;
-    /* padding: 32px 0px; */
+}
+
+.productCard{
+    padding: 45px 0;
+    padding-left: 30px;
 }
 
 button:hover{
     background-color: goldenrod;
+    border-radius: none;
 }
 button{
     font-size: 28px;

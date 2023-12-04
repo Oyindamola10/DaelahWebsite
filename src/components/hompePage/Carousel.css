@@ -1,6 +1,6 @@
 img{
-    width: 65px;
-    height: 540px;
+    width: 457px;
+    height: 357px;
 }
 
 p{
@@ -14,6 +14,6 @@ h5{
     background-color: goldenrod;
     border: none;
     position: relative;
-    bottom: 95px;
-    right:255px;
+    bottom: 45px;
+    left:20px;
 }

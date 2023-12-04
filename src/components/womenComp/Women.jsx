@@ -1,12 +1,16 @@
 import React from "react";
-import "./Men.css";
+import { useState } from "react";
+import "./Women.css";
 
-const Men = ({ image, name, price }) => {
+const Women = ({ image, name, price, id }) => {
+
+
+
   return (
-    <div>
-      <div className="cardMen">
+    <>
+      <div className="ladiesCard">
         <div>
-          <img src={image} alt="Vc silver" id="img2" />
+          <img src={image} alt="watch set" id="ladiesWatch" />
           <h6>{name}</h6>
           <h6>{price}</h6>
           <p>Ships in 24hrs</p>
@@ -15,14 +19,14 @@ const Men = ({ image, name, price }) => {
           <span className="fa fa-star checked"></span>
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
-          <div>
-            <button>Add To Cart</button>
-            
-          </div>
+        </div>
+        <div>
+          <button className="womenBtn">Add to cart</button>
+         
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default Men;
+export default Women;
