@@ -1,7 +1,7 @@
 import React from 'react'
 import Accessories from '../accessories/Accessories'
 import './ProductCard.css'
-const ProductCard = ({name, price, image, id}) => {
+const ProductCard = ({name, price, image, id, onAddToCart}) => {
   return (
     <>
       <div>
@@ -11,14 +11,14 @@ const ProductCard = ({name, price, image, id}) => {
           <h6>{name}</h6>
           <h6>{price}</h6>
           <p>Ships in 24hrs</p>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star"></span>
-          <span class="fa fa-star"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="womenBtn">Add to cart</button>
+          <button className="womenBtn" onClick={() => onAddToCart({ id, name, price, image })}>Add to cart</button>
          
         </div>
       </div>

@@ -1,5 +1,5 @@
 #navItem{
-  color:goldenrod;
+  color: #F0DA98;
 
   background-color: black;
 } 
@@ -11,12 +11,12 @@ Nav.Link{
 
 #brandName{
     padding-left: 85px;
-    color: goldenrod;
+    color:  #F0DA98;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #myLink{
-    color: goldenrod;
+    color:  #F0DA98;
 }
 
 .brandCart{
@@ -25,7 +25,7 @@ Nav.Link{
 }
 
 #brandCart2{
-    color: goldenrod;
+    color:  #F0DA98;
     padding-right: 15px;
     padding-top: 15px;
     align-items: center;

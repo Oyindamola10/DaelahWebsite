@@ -1,7 +1,7 @@
 import React from 'react'
 import './Accessories.css'
 
-const Accessories = ({image, name, price, id}) => {
+const Accessories = ({image, name, price, id, onAddToCart}) => {
   return (
     <>
         <div className="accessoriesCard">
@@ -17,7 +17,7 @@ const Accessories = ({image, name, price, id}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="accessoriesBtn">Add to cart</button>
+          <button className="accessoriesBtn" onClick={() => onAddToCart({ id, name, price, image })}>Add to cart</button>
          
         </div>
         

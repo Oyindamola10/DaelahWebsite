@@ -1,7 +1,11 @@
 import React from 'react'
 import ProductCard from './ProductCard'
+import MenList from '../menComp/MenList'
 
-const ProductList = () => {
+
+const ProductList = ({product }) => {
+
+  
 
     const products=[
           {
@@ -55,13 +59,15 @@ const ProductList = () => {
     ]
   return (
     <div className='productlistCard'>
-         { products.map(({name,Price,image},index) =>(
+         {/* <Search onSearch={handleSearch}/> */}
+         { products.map(({name,Price,image},id) =>(
          <ProductCard 
-         key={index}
+         key={id}
          name={name}
          price={Price}
          image={image}
          />))}
+         
     </div>
   )
 }

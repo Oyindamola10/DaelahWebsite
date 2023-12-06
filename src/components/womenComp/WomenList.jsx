@@ -83,9 +83,9 @@ const WomenList = () => {
       ]
   return (
     <div className='ladiesImg'>
-         { women.map(({name,Price,image},index) =>(
+         { women.map(({name,Price,image,id}) =>(
          <Women 
-         key={index}
+         key={id}
          name={name}
          price={Price}
          image={image}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
+// import SideBar from './components/sidebar/SideBar';
 import TopNavBar from './components/navBar/TopNavBar'
 import BottomNavBar from './components/navBar/BottomNavBar'
 import Home from './components/hompePage/Home'
@@ -19,16 +20,24 @@ import Contact from './components/contact/Contact';
 
 const App = () => {
   
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCartItems((prevCartItems) => [...prevCartItems,product]);
+  };
   
 
   return (
     <div>
       
       <header>
+      
       <TopNavBar></TopNavBar>
        <BottomNavBar></BottomNavBar>
+      
       </header>
       <main>
+      {/* <SideBar></SideBar> */}
        <Routes>
          <Route
           path='/'
@@ -40,17 +49,17 @@ const App = () => {
          />
          <Route
            path='/men'
-           element={<MenList/>}
+           element={<MenList  onAddToCart={handleAddToCart}/>}
 
          />
          
          <Route
           path='/women'
-          element={<WomenList/>}
+          element={<WomenList onAddToCart={handleAddToCart}/>}
          />
          <Route
           path='/accessories'
-          element={<AccessoriesList/>}
+          element={<AccessoriesList onAddToCart={handleAddToCart}/>}
          />
         <Route
            path='/Login'
@@ -63,11 +72,11 @@ const App = () => {
 
         <Route
         path='/shopping'
-        element={<ShoppingCart/>}
+        element={<ShoppingCart cartItems={cartItems}/>}
         />
         <Route
         path='/collections'
-        element={<CollectionList/>}
+        element={<CollectionList onAddToCart={handleAddToCart}/>}
         />
         <Route
         path='/contact'

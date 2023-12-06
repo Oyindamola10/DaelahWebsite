@@ -1,7 +1,7 @@
 import React from "react";
 import "./Men.css";
 
-const Men = ({ image, name, price }) => {
+const Men = ({ image, name, price, id, onAddToCart }) => {
   return (
     <div>
       <div className="cardMen">
@@ -16,7 +16,7 @@ const Men = ({ image, name, price }) => {
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
           <div>
-            <button>Add To Cart</button>
+            <button onClick={() => onAddToCart({ id, name, price, image })}>Add To Cart</button>
             
           </div>
         </div>
