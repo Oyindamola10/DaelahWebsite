@@ -32,6 +32,17 @@ Nav.Link{
     font-size: 35px;
 }
 
+#user{
+    color: #F0DA98;
+    padding-right: 24px;
+    padding-top: 15px;
+    font-size: 35px;
+}
+#size{
+    color: #F0DA98;
+    position: relative;
+    right: 12px;
+}
   /* #navItem{
     position: fixed;
     width: 100%;

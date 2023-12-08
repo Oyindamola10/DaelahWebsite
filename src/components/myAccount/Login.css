@@ -35,6 +35,13 @@
      background-color: rgb(45, 45, 54);
 }
 
+#username{
+    width: 340px;
+}
+#paswword{
+    width: 340px;
+}
+
 #input{
     width: 340px;
 }

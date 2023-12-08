@@ -21,7 +21,7 @@ const Women = ({ image, name, price, id, onAddToCart}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="womenBtn" onClick={() => onAddToCart({ id, name, price,image })}>Add to cart</button>
+          <button className="womenBtn">Add to cart</button>
          
         </div>
       </div>

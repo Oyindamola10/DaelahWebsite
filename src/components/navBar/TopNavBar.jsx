@@ -5,7 +5,7 @@ import "./TopNav.css";
 // import ShoppingCart from '../shoppingCart/ShoppingCart';
 
 
-const TopNavBar = () => {
+const TopNavBar = ({size}) => {
   
   
   return (
@@ -16,7 +16,7 @@ const TopNavBar = () => {
             <Nav >
               <Nav.Link href="/" id='myLink'>Home</Nav.Link>
               <Nav.Link href="/about" id='myLink'>About Us</Nav.Link>
-              <Nav.Link href="/SignUp" id='myLink'>My Account</Nav.Link>
+              {/* <Nav.Link href="/SignUp" id='myLink'>My Account</Nav.Link> */}
               <Nav.Link href="/contact" id='myLink'>Contact Us</Nav.Link>
               <Nav.Link href="/blog" id='myLink'>Blog</Nav.Link>
               </Nav>
@@ -26,7 +26,9 @@ const TopNavBar = () => {
           </Navbar.Collapse>
         </Container>
        <div className='brandCart'>
+        <a href='/signUp'> <i className="fa fa-user" id='user'></i> </a>
        <a href='/shopping'><i className="fa fa-shopping-cart" id='brandCart2'></i></a>
+       <span id='size'>{size}</span>
        </div> 
        
       </Navbar>

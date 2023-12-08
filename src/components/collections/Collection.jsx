@@ -1,7 +1,12 @@
 import React from 'react'
 import './Collection.css'
+// import product from '../../product'
+// import Product from '../../../../Backend/models/Product'
 
-const Collection = ({name, price, image,id, onAddToCart}) => {
+const Collection = ({name, price, image}) => {
+
+
+
   return (
     <>
       <div className="collectionCard">
@@ -17,8 +22,8 @@ const Collection = ({name, price, image,id, onAddToCart}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="collectionBtn" onClick={() => onAddToCart({ id, name, price,image })}>Add to cart</button>
-         
+          <button className="collectionBtn" >Add to cart</button>
+         {/* <Product></Product> */}
         </div>
       </div>
     </>

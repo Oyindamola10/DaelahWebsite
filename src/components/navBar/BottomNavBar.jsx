@@ -7,16 +7,21 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./BottomNav.css"
 
    const BottomNavBar = () => {
-//   const[selectedCategory, setSelectedCategory] = useState(null);
-
-//   //search filter
-//   const[query, setQuery] =("");
-
-//   //handle search bar
-//   const handleInputChange=event=>{
-//     setQuery(event.target.value)
-//   }
-//    const filteredItems = men.filter()
+    // const [addItem, setAddItem] =useState({
+    //   product_id
+    //  });
+  
+    //  const handleAddItem = async(e) => {
+    //   e.preventDefault();
+  
+    //   await fetch("http://localhost:8000/api/cart", {
+    //     method: "POST",
+    //     headers: {
+    //        "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(addItem),
+    //   });
+    // }
 
   return (
     <>

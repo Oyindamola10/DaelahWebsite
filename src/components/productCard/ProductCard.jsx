@@ -1,7 +1,9 @@
 import React from 'react'
-import Accessories from '../accessories/Accessories'
 import './ProductCard.css'
-const ProductCard = ({name, price, image, id, onAddToCart}) => {
+
+import './ProductCard.css'
+const ProductCard = ({item, handleClick}) => {
+  const {name,price,image} = item;
   return (
     <>
       <div>
@@ -18,7 +20,8 @@ const ProductCard = ({name, price, image, id, onAddToCart}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="womenBtn" onClick={() => onAddToCart({ id, name, price, image })}>Add to cart</button>
+        <button className="womenBtn" onClick={(item) => handleClick(item)}>Add to cart</button>
+
          
         </div>
       </div>
