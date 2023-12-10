@@ -3,7 +3,7 @@ import './Collection.css'
 // import product from '../../product'
 // import Product from '../../../../Backend/models/Product'
 
-const Collection = ({name, price, image}) => {
+const Collection = ({name, price, image,handleClick}) => {
 
 
 
@@ -22,7 +22,7 @@ const Collection = ({name, price, image}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="collectionBtn" >Add to cart</button>
+          <button className="collectionBtn" onClick={()=>handleClick(image,name,price)}>Add to cart</button>
          {/* <Product></Product> */}
         </div>
       </div>

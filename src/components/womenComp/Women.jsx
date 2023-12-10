@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Women.css";
 
-const Women = ({ image, name, price, id, onAddToCart}) => {
+const Women = ({ image, name, price, handleClick}) => {
 
 
 
@@ -21,7 +21,7 @@ const Women = ({ image, name, price, id, onAddToCart}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="womenBtn">Add to cart</button>
+          <button className="womenBtn" onClick={()=>handleClick(image,name,price)}>Add to cart</button>
          
         </div>
       </div>

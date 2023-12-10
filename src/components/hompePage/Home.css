@@ -1,5 +1,5 @@
 .myHome{
-    background-color: black;
+    border: #fff;
     color:  #F0DA98;
 }
 #watch1{
@@ -36,8 +36,8 @@
 } 
 
 #btn3{
-    width: 117px;
-    height: 49px;
+    width: 157px;
+    height: 69px;
     border: none;
     border-radius: 10px;
     background-color:  #F0DA98;

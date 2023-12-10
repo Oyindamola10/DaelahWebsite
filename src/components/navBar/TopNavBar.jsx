@@ -5,7 +5,7 @@ import "./TopNav.css";
 // import ShoppingCart from '../shoppingCart/ShoppingCart';
 
 
-const TopNavBar = ({size}) => {
+const TopNavBar = ({size, setShow}) => {
   
   
   return (
@@ -25,9 +25,11 @@ const TopNavBar = ({size}) => {
           <Navbar.Collapse id="basic-navbar-nav">
           </Navbar.Collapse>
         </Container>
-       <div className='brandCart'>
+       <div className='brandCart' onClick={() =>setShow(true)}>
         <a href='/signUp'> <i className="fa fa-user" id='user'></i> </a>
-       <a href='/shopping'><i className="fa fa-shopping-cart" id='brandCart2'></i></a>
+        <span>
+       <a href='/shopping'><i className="fa fa-shopping-cart" id='brandCart2' onClick={()=>setShow(false)} ></i></a>
+       </span>
        <span id='size'>{size}</span>
        </div> 
        

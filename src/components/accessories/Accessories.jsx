@@ -1,7 +1,7 @@
 import React from 'react'
 import './Accessories.css'
 
-const Accessories = ({image, name, price,}) => {
+const Accessories = ({image, name, price,handleClick}) => {
   
   return (
     <>
@@ -18,7 +18,7 @@ const Accessories = ({image, name, price,}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="accessoriesBtn">Add to cart</button>
+          <button className="accessoriesBtn" onClick={() => handleClick(image,name,price)}>Add to cart</button>
          
         </div>
         

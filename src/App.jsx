@@ -20,15 +20,43 @@ import {useState} from 'react'
 
 const App = () => {
   const[show, setShow] = useState(true);
-  const[cart, setCart] = useState(true);
+  const[cart, setCart] = useState([]);
+  const[warning, setWarning] =useState(false);
 
   const handleClick = (item) => {
-    console.log(item)
+    let isPresent = false;
+    cart.forEach((product)=>{
+      if (item.id === product.id)
+        isPresent = true;
+      
+    })
+     if (isPresent){
+       setWarning(true);
+       setTimeout(() =>{
+            setWarning(false);
+       }, 2000);
+       return;
+     }
+
+      setCart([...cart, item])
+  }
+  const handleChange = (item, d) =>{
+    let ind = -1;
+    cart.forEach((data,index) => {
+      if(data.id === item.id)
+       ind = index;
+    })
+    const tempArr = cart;
+    tempArr[ind].amount += d;
+
+    if (tempArr[ind].amount === 0)
+       tempArr[ind].amount = 1;
+      setCart([...tempArr])
   }
   return (
     <div>
       <header>
-        <TopNavBar size={cart.length}></TopNavBar>
+        <TopNavBar size={cart.length} setShow={setShow}></TopNavBar>
         <BottomNavBar></BottomNavBar>
       </header>
       <main>
@@ -36,20 +64,29 @@ const App = () => {
         {/* <Router> */}
           {/* <CartProvider> */}
             <Routes>
-              <Route path="/" element={<Home handleClick= {handleClick}/>} />
+              
+             <Route path="/" element={<Home handleClick= {handleClick}/>} /> : 
+              
+             
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/men" element={<MenList />} />
+              <Route path="/men" element={<MenList  handleClick= {handleClick} />} />
 
-              <Route path="/women" element={<WomenList />} />
-              <Route path="/accessories" element={<AccessoriesList />} />
+              <Route path="/women" element={<WomenList handleClick={handleClick}/>} />
+              <Route path="/accessories" element={<AccessoriesList  handleClick= {handleClick} />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signUp" element={<SignUp />} />
 
-              <Route path="/shopping" element={<ShoppingCart />} />
+              <Route path="/shopping" element={<ShoppingCart  cart={cart} setCart={setCart} handleChange={handleChange}/>} />
+              
 
-              <Route path="/collections" element={<CollectionList />} />
+              <Route path="/collections" element={<CollectionList   handleClick= {handleClick}/>} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
+             
+
+             {
+                  warning && <div className="warning">Product is already added to your cart </div>
+              }
           {/* </CartProvider> */}
         {/* </Router> */}
       </main>

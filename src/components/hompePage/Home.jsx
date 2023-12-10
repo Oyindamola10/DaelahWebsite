@@ -5,7 +5,7 @@ import CarouselCom from './Carousel'
 import './Home.css'
 // import ShopNowButton from '../ShopNowButton';
 
-const Home = () => {
+const Home = ({handleClick}) => {
   
   return (
     <>
@@ -25,7 +25,7 @@ const Home = () => {
             </div>
             <h1 id='heading1'>A Timepiece For All Occassions</h1>
           
-           <ProductList/>
+           <ProductList  handleClick={handleClick}/>
         </div>
     </>
   )
