@@ -1,7 +1,10 @@
 import React from "react";
 import "./Men.css";
+import { useAppContext } from "../../context/AppContext";
 
-const Men = ({ image, name, price,handleClick}) => {
+const Men = ({ image, name, price, }) => {
+  const { incrCart } = useAppContext();
+
   return (
     <div>
       <div className="cardMen">
@@ -16,8 +19,8 @@ const Men = ({ image, name, price,handleClick}) => {
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
           <div>
-            <button onClick={() => handleClick(image,name,price)} >Add To Cart</button>
-            
+            <button onClick={() => incrCart()} >Add To Cart</button>
+
           </div>
         </div>
       </div>
