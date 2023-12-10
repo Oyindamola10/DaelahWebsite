@@ -17,6 +17,7 @@ import AccessoriesList from "./components/accessories/AccessoriesList";
 import CollectionList from "./components/collections/CollectionList";
 import Contact from "./components/contact/Contact";
 import {useState} from 'react'
+import Search from './page/Search'
 
 const App = () => {
   const[show, setShow] = useState(true);
@@ -63,24 +64,18 @@ const App = () => {
         {/* <SideBar></SideBar> */}
         {/* <Router> */}
           {/* <CartProvider> */}
-            <Routes>
-              
+            <Routes>       
              <Route path="/" element={<Home handleClick= {handleClick}/>} /> : 
-              
-             
               <Route path="/about" element={<AboutUs />} />
               <Route path="/men" element={<MenList  handleClick= {handleClick} />} />
-
               <Route path="/women" element={<WomenList handleClick={handleClick}/>} />
               <Route path="/accessories" element={<AccessoriesList  handleClick= {handleClick} />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signUp" element={<SignUp />} />
-
               <Route path="/shopping" element={<ShoppingCart  cart={cart} setCart={setCart} handleChange={handleChange}/>} />
-              
-
               <Route path="/collections" element={<CollectionList   handleClick= {handleClick}/>} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/search/:id" element={<Search />} />
             </Routes>
              
 
