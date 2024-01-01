@@ -8,19 +8,19 @@ const Category = () => {
       <div className="sidebar-title2">
         <label htmlFor="" className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark" /> All
+          <span className="checkmark" /> <a href="/">All</a>
         </label>
         <label htmlFor="" className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark" /> Men
+          <span className="checkmark" /><a href="/men"> Men</a>
         </label>
         <label htmlFor="" className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark" /> Women
+          <span className="checkmark" /> <a href="/women">Women</a>
         </label>
         <label htmlFor="" className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark" /> Accessories
+          <span className="checkmark" /> <a href="/accessories">Accessories</a>
         </label>
       </div>
     </div>

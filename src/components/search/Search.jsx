@@ -19,7 +19,7 @@ const Search = () => {
 
     return (
         <Form className="d-flex">
-            <Form.Control type="text" onChange={(e) => search(e)} placeholder="Searcmalslh" className="me-2" aria-label="Search" />
+            <Form.Control type="text" onChange={(e) => search(e)} placeholder="Search " className="me-2" aria-label="Search" />
         </Form>
     )
 }

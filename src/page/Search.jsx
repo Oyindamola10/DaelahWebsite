@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
+import { useAppContext } from "../context/AppContext";
+import './Search.css'
 
 
 const SearchPage = () => {
@@ -9,30 +11,33 @@ const SearchPage = () => {
 
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get(`https://special-goggles-qrwrwvw6rq34vxj-8088.app.github.dev/api/product/${id}`);
+            const response = await axios.get(`http://localhost:8088/api/product/${id}`);
 
             setSearchedItem(response.data.postData);
         }
 
         getData();
     }, [id])
+    const { incrCart } = useAppContext();
 
 
     return (
         <div>
             {
                 searchedItems?.length ? (
-                    <div>
+                    <div className='searchCard'>
                         {searchedItems.map(item => (
                             <div style={{ color: 'white', background: 'black' }}>
                                 <img src={item.image} />
-                                
+                                <p>{item.name}</p>
+                                {/* <p id='priceColor'>{item.Price}</p> */}
+                                <button onClick={() => incrCart()} id='btnSearch'>Add To Cart</button>
                             </div>
                         ))}
                     </div>
                 ) : (
-                    <div style={{ background: 'black', color: 'white' }}>
-                        No search Results
+                    <div style={{ background: 'Black', color: "White"}}>
+                        No Search Results
                     </div>
                 )
             }

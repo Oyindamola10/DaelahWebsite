@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import "./Women.css";
+import { useAppContext } from "../../context/AppContext";
 
-const Women = ({ image, name, price, handleClick}) => {
-
+const Women = ({ image, name, price}) => {
+ 
+  const { incrCart } = useAppContext();
 
 
   return (
@@ -21,7 +23,7 @@ const Women = ({ image, name, price, handleClick}) => {
           <span className="fa fa-star"></span>
         </div>
         <div>
-          <button className="womenBtn" onClick={()=>handleClick(image,name,price)}>Add to cart</button>
+          <button className="womenBtn" onClick={() => incrCart()}>Add to cart</button>
          
         </div>
       </div>

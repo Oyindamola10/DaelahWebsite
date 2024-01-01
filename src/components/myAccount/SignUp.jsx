@@ -109,7 +109,7 @@ const SignUp = () => {
             <input type='checkbox' id='terms'/>
         </div>
             <button type="submit" onClick={handleSignup}>Create My Account</button>
-            <p>Already have an account? <a href="/Login">Sign In</a></p>
+            <p id='signUpP'>Already have an account? <a href="/Login">Sign In</a></p>
        </div>
     </div>
     </>

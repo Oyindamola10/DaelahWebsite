@@ -3,20 +3,25 @@ import './ProductCard.css'
 
 import './ProductCard.css'
 import { useAppContext } from '../../context/AppContext';
+import addProductToCart from './addProductToCart';
 
 const ProductCard = ({ item, }) => {
   const { name, price, image } = item;
   const { incrCart } = useAppContext();
-
+ 
+  const handleAddToCart = () => {
+    incrCart();
+    addProductToCart(item);
+  }
   return (
     <>
       <div>
         <div className="productCard">
           <div>
             <img src={image} alt="products" id="productsId" />
-            <h6>{name}</h6>
-            <h6>{price}</h6>
-            <p>Ships in 24hrs</p>
+            <h6 id='theProduct'>{name}</h6>
+            <h6 id='theProduct1'>{price}</h6>
+            <p id='theProduct2'>Ships in 24hrs</p>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
             <span className="fa fa-star checked"></span>
@@ -25,7 +30,7 @@ const ProductCard = ({ item, }) => {
           </div>
           <div>
             <button className="womenBtn"
-              onClick={() => incrCart()}>Add to cart</button>
+              onClick={() => handleAddToCart()}>Add to cart</button>
 
 
           </div>

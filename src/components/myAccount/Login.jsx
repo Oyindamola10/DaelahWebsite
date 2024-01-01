@@ -45,7 +45,7 @@ const Login = () => {
        <div className='boxs'>
         <h1>DaelahCollectibles</h1>
         {/* <h4>Login.</h4> */}
-        <p>Login to your account to continue</p>
+        <p id='signUpP'>Login to your account to continue</p>
         <div className='forms'>
             <div>
                 <Form.Label>Username</Form.Label>
@@ -65,7 +65,7 @@ const Login = () => {
             </div>
             <a id='links' href="/signUp">Forgot your password?</a>
             <button type="button" onClick={handleLogin}>Log In</button>
-            <p>Don't have an account? <a id="links" href="/SignUp"><span>Sign Up</span></a></p>
+            <p id='signUpP'>Don't have an account? <a id="links" href="/SignUp"><span>Sign Up</span></a></p>
         </div>
        </div>
     </div>
